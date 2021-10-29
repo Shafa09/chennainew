@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reserve your seat</title>
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+body{
+height:100vh;
+	width:100%;
+	background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(boo.jpg);
+	background-position: center;
+	background-size: cover;
+	padding-left:5%;
+	padding-right:5%;
+	box-sizing:border-box;
+	position:relative;
+}
+table tr td h1{
+color:purple;
+font-style: oblique;
+}
+table tr td{
+color:black;
+background-color: grey;
+text-align: center;
+font-size: 16px;
+margin-left:100px;
+padding-top:20px;
+padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;
+
+}
+table tr td input{
+border: 1px solid #fff;
+	padding:10px 25px;
+	text-decoration: none;
+	font-size: 13px;
+	margin-left:4px;
+	display: inline-block;
+}
+table tr td input:hover{
+background-color: skyblue;
+color:white;
+}
+table a{
+text-decoration: none;
+color:black;
+padding-left: 4px;
+}
+table a:hover{
+color:white;
+background-color: skyblue;
+display:inline-block;
+padding:4px 5px;
+margin:0px auto;
+border-radius: 10px;
+}
+table button{
+color:black;
+display:inline-block;
+background-color: white;
+font-size: 15px;
+padding-left: 5px;
+padding-right: 5px;
+padding-top: 5px;
+padding-bottom: 5px;
+font-style: oblique;
+}
+table button:hover{
+color:white;
+background-color: black;
+}
+</style>
+</head>
+<body background="boo.jpg">
+<center>
+<form action="bus.jsp" method="post">
+<table>
+
+<tr><td><h1>Reserve Your Seat</h1></td></tr>
+<tr><td>Name*<input type="text" name="Name" ></t></tr>
+<tr><td>Bus No*<input type="text" name="BusNo" ></td></tr>
+<tr><td>Bus Name*<input type="text" name="BusName" ></td></tr>
+<tr><td>From City*<input type="text" name="FromCity" ></td></tr>
+<tr><td>To City*<input type="text" name="ToCity" ></td></tr>
+<tr><td>Date*<input type="text" name="Date" ></td></tr>
+<tr><td>Time*<input type="text" name="Time" ></td></tr>
+<tr><td>Ticket Price*<input type="text" name="TicketPrice" ></td></tr>
+<tr><td><button type="submit">Save</td></tr>
+<tr><td><a href="city.html">Cancel</a></td></tr>
+
+</table>
+</form>
+</center>
+</body>
+</html>

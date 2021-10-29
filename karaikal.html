@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function showData(){
+	var fname=document.frm.fn.value;
+	var lname=document.frm.ln.value;
+	document.getElementById("s").innerHTML="<font color='red'>hello "+fname+" "+lname+"</font>";
+}
+</script>
+</head>
+<body>
+<form name="frm">
+enter your firstname:<input type="text" name="fn">
+<br>
+enter your lastname:<input type="text" name="ln">
+<br>
+<input type="button" value="click" onclick="showData()">
+</form>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Login</title>
+<style>
+body{
+height:100vh;
+	width:100%;
+	background-position: center;
+	background-size: cover;
+	padding-left:5%;
+	padding-right:5%;
+	box-sizing:border-box;
+	position:relative;
+}
+table tr th h1{
+color:darkblue;
+font-style: oblique;
+}
+table tr th{
+color:blue;
+background-color: skyblue;
+text-align: center;
+font-size: 17px;
+margin:0px auto;
+padding-top:20px;
+padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;
+
+}
+table tr th input{
+border: 1px solid #fff;
+	padding:10px 25px;
+	text-decoration: none;
+	font-size: 14px;
+	margin:0px auto;
+	display: inline-block;
+	color:darkblue;
+}
+table tr th input:hover{
+background-color: blue;
+color:white;
+}
+table a{
+text-decoration: none;
+color:black;
+padding-left: 4px;
+}
+table a:hover{
+color:white;
+background-color: blue;
+display:inline-block;
+padding:4px 5px;
+margin:0px auto;
+border-radius: 10px;
+}
+</style>
+</head>
+<body background="bgpic.jpg">
+<center>
+<form action="login.jsp" name="myform" method="post" onsubmit="validate()">
+<table>
+<tr><th><h1>User Login</h1></th></tr>
+<tr><th><img src="adm.jpg" height="150" width="200"></th></tr>
+<tr><th>Username     <input type="text" name="Username" placeholder="Enter Username"></th></tr>
+<tr><th>Password     <input type="password" name="Password" placeholder="Enter Password"></th></tr>
+<tr><th>
+<input type="submit" value="login" onsubmit="validate()">
+<a href="book.html">  New User? Click Here</a>
+</th></tr>
+</table>
+</form>
+</center>
+<script>
+function validate()
+{
+var Username=document.myform.Username.value;
+var Password=document.myform.Password.value;
+if(Username==null||Username==""){
+	alert("username cannot be blank");
+	return false;
+}
+else if(Password==null||Password==""){
+	alert("password cannot be blank");
+	return false;
+}
+else if(Password.length<6){
+	alert("password must be greater than 6 character");
+	return false;
+}
+
+}
+</script>
+</body>
+</html>

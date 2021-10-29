@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Book here</title>
+<script>
+function validateForm()
+{
+	var Username=document.myform.Username.value;
+	var Password=document.myform.Password.value;
+	var Phone =document.myform.Phone.value
+	if(Username==null||Username=="")
+		{
+		alert("Username cannot be blank");
+		return false;
+		}
+	else if(Password==null||Password==""){
+		alert("Password cannot be blank");
+		return false;
+	}
+	else if(Password.length<6){
+		alert("Password Must Be More Than 6 Characters");
+		return false;
+	}
+	else if(Phone==""){
+		alert("city Cannot be Blank");
+		return false;		
+	}
+	else if(isNaN(num)){
+		alert("Please Enter a Numeric");
+		num.focus();
+		
+	}
+	else{
+		open("index.html")
+	}
+	}
+</script>
+<style>
+*{
+padding:0;
+margin:0;
+font-family: sans-serif;
+}
+body{
+background: url(bgpic.jpg) no-repeat;
+background-size: cover;
+}
+.book-form{
+width:350px;
+top:50%;
+left:50%;
+margin-top:30px;
+margin-left:500px;
+}
+.book-form h1{
+font-size: :40px;
+text-align: center;
+text-transform: uppercase;
+margin-right:50px;
+display:inline-block;
+background-color: black;
+color:white;
+font-style: oblique;
+padding:10px 15px;
+padding-left:15px;
+padding-right:15px;
+}
+.book-form p{
+font-size: 20px;
+margin:15px 0;
+}
+.book-form input{
+font-size: 16px;
+width:100%;
+padding:15px 10px;
+}
+.book-form button{
+font-size: 18px;
+font-weight: bold;
+margin:20px 0;
+padding:10px 15px;
+width:50%;
+border-radius:10px;
+}
+.book-form a{
+    border:3px solid pink;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	display: inline-block;
+	color:white;
+	background-color:grey;
+	margin-left:40px;
+	padding:10px 15px;
+	border-radius: 10px;
+	padding-left: 29px;
+	padding-right: 29px;
+}
+#head{
+background-color: pink;
+height:40px;
+width:100%;
+color:solid black;
+font-size: 20px;
+text-align: center;
+font-style: oblique;
+padding-top:15px;
+}
+</style>
+</head>
+<body>
+<div id="head">Register Yourself To Receive All The Notification From Our Website</div>
+<div class="book-form">
+<h1>Register Here</h1>
+<form action="indexAction.jsp" name="myform" method="post" onsubmit="validateForm()" >
+<p>Username</p>
+<input type="text" Name="Username" placeholder="user name">
+<p>Password</p>
+<input type="password" Name="Password" placeholder="password">
+<P>Phone</P>
+<input type="text" Name="Phone" placeholder="Enter number">
+<P>Email</P>
+<input type="text" Name="Email" placeholder="Enter Email">
+
+<button type="submit">Register</button>
+<a href="city.html">Cancel</a>
+</form>
+</div>
+</body>
+</html>

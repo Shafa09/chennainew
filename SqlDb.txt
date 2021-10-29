@@ -1,0 +1,72 @@
+CITY LIFE CHENNAI: DATABASE CONNECTION
+
+Tables Used: user, Booking and bus.
+
+
+
+mysql> use project;
+Database changed
+mysql> describe user;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| Username | varchar(20) | NO   |     | NULL    |       |
+| Password | varchar(25) | NO   |     | NULL    |       |
+| Phone    | varchar(25) | NO   |     | NULL    |       |
+| Email    | varchar(27) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (2.21 sec)
+
+mysql> select*from user;
++----------+------------+-------------+-----------------------+
+| Username | Password   | Phone       | Email                 |
++----------+------------+-------------+-----------------------+
+| shafa    | 1234567    | 08072853199 | fanashafa91@gmail.com |
+| shalini  | shalini66  | 2345678987  | shalini@gmail.com     |
+| raiza    | raisa12345 | 89765443211 | raiza123@gmail.com    |
++----------+------------+-------------+-----------------------+
+3 rows in set (0.10 sec)
+
+mysql> describe booking;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Name  | varchar(20) | NO   |     | NULL    |       |
+| Phone | varchar(25) | NO   |     | NULL    |       |
+| hotel | varchar(25) | NO   |     | NULL    |       |
+| room  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select*from booking;
++------------+-------------+-------------------+------+
+| Name       | Phone       | hotel             | room |
++------------+-------------+-------------------+------+
+|            |             |                   |      |
+| Shafa Fana | 9876543291  | fab hotel blossom | 2    |
+| grete      | 23456788998 | fab hotel blossom | 2    |
++------------+-------------+-------------------+------+
+3 rows in set (0.47 sec)
+
+mysql> describe bus;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| Name        | varchar(25) | NO   |     | NULL    |       |
+| BusNo       | varchar(22) | NO   |     | NULL    |       |
+| BusName     | varchar(25) | NO   |     | NULL    |       |
+| FromCity    | varchar(24) | NO   |     | NULL    |       |
+| ToCity      | varchar(25) | NO   |     | NULL    |       |
+| Date        | varchar(22) | NO   |     | NULL    |       |
+| Time        | varchar(22) | NO   |     | NULL    |       |
+| TicketPrice | varchar(25) | NO   |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+8 rows in set (0.29 sec)
+
+mysql> select*from bus;
++-------+-------+---------+----------+---------+------------+--------+-------------+
+| Name  | BusNo | BusName | FromCity | ToCity  | Date       | Time   | TicketPrice |
++-------+-------+---------+----------+---------+------------+--------+-------------+
+| shafa | TN999 | Express | karaikal | chennai | 09/11/2021 | 7.00pm |             |
++-------+-------+---------+----------+---------+------------+--------+-------------+
+3 rows in set (0.22 sec)
